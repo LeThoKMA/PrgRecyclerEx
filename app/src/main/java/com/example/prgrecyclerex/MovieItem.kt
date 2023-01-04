@@ -1,18 +1,18 @@
 package com.example.prgrecyclerex
 
-sealed class MovieItem() {
-    class TopBanner() : MovieItem()
-    class Top10() : MovieItem()
-    class TvShow() : MovieItem()
-    class Trending() : MovieItem()
-    class Anime() : MovieItem()
+sealed class MovieItem(id: String) {
+    class TopBanner(id: String) : MovieItem(id)
+    class Top10(id: String) : MovieItem(id)
+    class TvShow(id: String) : MovieItem(id)
+    class Trending(id: String) : MovieItem(id)
+    class Anime(id: String) : MovieItem(id)
 
 }
 
-enum class MovieType(var value: Int) {
-    TOP_BANNER(0),
-    TOP_10(1),
-    TV_SHOW(2),
-    TRENDING(3),
-    ANIME(4)
+enum class MovieType {
+    TOP_BANNER,
+    TOP_10,
+    TV_SHOW,
+    TRENDING,
+    ANIME
 }
